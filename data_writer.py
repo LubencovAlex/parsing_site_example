@@ -1,6 +1,8 @@
 import xlsxwriter
 from main_pars import pars_card
 
+# Функция с которой начинается работа всего скрипта
+# В данной функции записываем полученный список всех товаров с выбранных страниц в таблицу
 def writer_cards(parametr):
     file = xlsxwriter.Workbook("cards_data.xlsx")
     page = file.add_worksheet("товар")
@@ -22,4 +24,6 @@ def writer_cards(parametr):
 
     file.close()
 
+
+# Вызываем основную функцию для запуска скрипта
 writer_cards(pars_card)
